@@ -32,8 +32,7 @@ jobs:
         fileName: "RazorEnhanced-*.zip"
     - name: Display structure of downloaded files
       run: dir
-    - uses: montudor/action-zip@v1
-      with:
-        args: unzip -qq RazorEnhanced-*.zip -d dir
+    - name: Extract some files
+      run: 7z x RazorEnhanced-*.zip
     - name: Display structure of unzipped files
       run: dir
