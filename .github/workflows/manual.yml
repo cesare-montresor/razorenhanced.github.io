@@ -1,0 +1,33 @@
+# This is a basic workflow that is manually triggered
+
+name: AutoDoc API
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+
+
+env:
+  # Path to the solution file relative to the root of the project.
+  SOLUTION_FILE_PATH: .
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # Configuration type to build.
+  # You can convert this to a build matrix if you need coverage of multiple configuration types.
+  # https://docs.github.com/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
+  BUILD_CONFIGURATION: Debug
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  
+  download:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: robinraju/release-downloader@v1.6
+      with:
+        repository: "RazorEnhanced/RazorEnhanced"
+        latest: true
+        fileName: "RazorEnhanced-*.zip"
+        zipBall: true
