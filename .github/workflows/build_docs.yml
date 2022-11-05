@@ -28,10 +28,12 @@ jobs:
     - name: Extract some files
       run: 7z x RazorEnhanced-*.zip
     - name: Display unzipped files
-      run: dir -S
+      run: dir
   
     #Run 
     - name: Run RE to trigger the creation of AutoComplete.json
-      run: "$proc = start ./RazorEnhanced.exe -Passthru; $proc | Wait-Process -Timeout 3 -ErrorAction SilentlyContinue; kill $proc;"
+      run: $proc = start ./RazorEnhanced.exe -Passthru; $proc | Wait-Process -Timeout 3 -ErrorAction SilentlyContinue; kill $proc;
     - name: Display directories
       run: dir Config/
+    - name: Display directories
+      run: dir -S
