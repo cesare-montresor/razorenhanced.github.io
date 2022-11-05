@@ -40,5 +40,7 @@ jobs:
     - name: Download AutoDoc.py
       run: Invoke-WebRequest -OutFile "autodoc.py" -Uri https://raw.githubusercontent.com/RazorEnhanced/razorenhanced.github.io/main/doc/autodoc.py
     - name: Display directories
-      run: dir Scripts/
+      run: dir
+    - name: Display autodoc.py content
+      run: Get-Content "autodoc.py"
     
