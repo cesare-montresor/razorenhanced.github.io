@@ -37,4 +37,4 @@ jobs:
     - name: Display directories
       run: dir 
     - name: Display directories
-      run: dir . //S
+      run: dir Config/
