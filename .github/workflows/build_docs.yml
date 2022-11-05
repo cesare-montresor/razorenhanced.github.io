@@ -34,5 +34,5 @@ jobs:
     - name: Run RE to trigger the creation of AutoComplete.json
       timeout-minutes: 1
       run: ./RazorEnhanced.exe
-    - name: Display Config/ directory
+    - name: Display directories
       run: dir /S
