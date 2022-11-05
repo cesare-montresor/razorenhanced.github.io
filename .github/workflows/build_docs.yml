@@ -21,18 +21,28 @@ env:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   
-  download:
+  rebuild_docs:
     runs-on: windows-latest
     
     steps:
+    #Download
     - uses: robinraju/release-downloader@v1.6
+      name: Download Latest RE
       with:
         repository: "RazorEnhanced/RazorEnhanced"
         latest: true
         fileName: "RazorEnhanced-*.zip"
-    - name: Display structure of downloaded files
+    - name: Display downloaded files
       run: dir
+      
+    #Unzip
     - name: Extract some files
-      run: 7z x RazorEnhanced-*.zip -o/latest
-    - name: Display structure of unzipped files
+      run: 7z x RazorEnhanced-*.zip
+    - name: Display unzipped files
       run: dir
+  
+    #Run 
+    - name: Run RE to trigger the creation of AutoComplete.json
+      run: RazorEnhanced.exe
+    - name: Display Config/ directory
+      run: dir Config/
