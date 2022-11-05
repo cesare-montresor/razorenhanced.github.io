@@ -44,3 +44,16 @@ jobs:
     - name: Display autodoc.py content
       run: Get-Content "autodoc.py"
     
+    #Build Docs
+    - name: Display autodoc.py content
+      run: python autodoc.py
+      
+    #Checkout current website
+    - name: Checkout website repo
+      uses: actions/checkout@v3
+      with:
+        repository: RazorEnhanced/razorenhanced.github.io
+        path: website_repo
+        
+    - name: Display directories
+      run: dir -S
