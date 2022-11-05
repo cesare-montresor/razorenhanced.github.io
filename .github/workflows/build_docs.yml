@@ -28,11 +28,11 @@ jobs:
     - name: Extract some files
       run: 7z x RazorEnhanced-*.zip
     - name: Display unzipped files
-      run: dir /S
+      run: dir .\ /S
   
     #Run 
     - name: Run RE to trigger the creation of AutoComplete.json
       timeout-minutes: 1
       run: ./RazorEnhanced.exe
     - name: Display directories
-      run: dir /S
+      run: dir .\ /S
