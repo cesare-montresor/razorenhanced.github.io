@@ -37,16 +37,16 @@ jobs:
     #  run: dir Config/
       
     #Download AutoDoc.py
-    - name: Download AutoDoc.py
-      run: Invoke-WebRequest -OutFile "autodoc.py" -Uri https://raw.githubusercontent.com/RazorEnhanced/razorenhanced.github.io/main/doc/autodoc.py
-    - name: Display directories
-      run: dir
-    - name: Display autodoc.py content
-      run: Get-Content "autodoc.py"
+    #- name: Download AutoDoc.py
+    #  run: Invoke-WebRequest -OutFile "autodoc.py" -Uri https://raw.githubusercontent.com/RazorEnhanced/razorenhanced.github.io/main/doc/autodoc.py
+    #- name: Display directories
+    #  run: dir
+    #- name: Display autodoc.py content
+    #  run: Get-Content "autodoc.py"
     
     #Build Docs
-    - name: Display autodoc.py content
-      run: python autodoc.py
+    #- name: Display autodoc.py content
+    #  run: python autodoc.py
       
     #Checkout current website
     - name: Checkout website repo
@@ -54,6 +54,7 @@ jobs:
       with:
         repository: RazorEnhanced/razorenhanced.github.io
         path: website_repo
-        
+    
+    
     - name: Display directories
       run: dir -S
