@@ -33,6 +33,6 @@ jobs:
     - name: Display structure of downloaded files
       run: dir
     - name: Extract some files
-      run: 7z x RazorEnhanced-*.zip
+      run: 7z x RazorEnhanced-*.zip -o latest/
     - name: Display structure of unzipped files
       run: dir
