@@ -1,4 +1,103 @@
 <p>
+  <strong>Version 0.8.2.49 [11/4/2022]</strong>
+  Change delay on bandages to monitor health change events instead of timed polling
+</p>
+<p>
+  <strong>Version 0.8.2.48 [11/3/2022]</strong>
+  Code fix, Dalamar was right 8.2.47 broken
+</p>
+<p>
+  <strong>Version 0.8.2.47 [11/3/2022]</strong>
+  Code cleanup for FindAllItemBy
+</p>
+<p>
+  <strong>Version 0.8.2.46 [11/1/2022]</strong>
+  Add Player.ClearCorpseList()
+</p>
+<p>
+  <strong>Version 0.8.2.45 [10/31/2022]</strong>
+  Reduce delay between healthy checks
+</p>
+<p>
+  <strong>Version 0.8.2.44 [10/31/2022]</strong>
+  Added Player.Corpses
+</p>
+<p>
+  <strong>Version 0.8.2.43 [10/23/2022]</strong>
+  Fixed edit script when list is sorted
+</p>
+<p>
+  <strong>Version 0.8.2.42 [10/18/2022]</strong>
+  Items.IgnoreTypes added
+  PathFinding.GetPath/RunPath/WalkPath parameters corrected
+</p>
+<p>
+  <strong>Version 0.8.2.41 [10/18/2022]</strong>
+  Items.IgnoreTypes added
+  PathFinding.GetPath/RunPath/WalkPath parameters corrected
+</p>
+<p>
+  <strong>Version 0.8.2.39 [10/4/2022]</strong>
+  IgnoreTypes test Function
+</p>
+<p>
+  <strong>Version 0.8.2.38 [9/27/2022]</strong>
+  added PathFindTo X Y
+  to uos parser
+</p>
+<p>
+  <strong>Version 0.8.2.37 [9/26/2022]</strong>
+  Fix a bug removing t-maps
+</p>
+<p>
+  <strong>Version 0.8.2.36 [9/26/2022]</strong>
+  Fixed point3d for Player.PathFindTo
+  Added PathFinding.PathFindTo so its easy to use
+</p>
+<p>
+  <strong>Version 0.8.2.35 [9/25/2022]</strong>
+  Fixed an Alias selection bug in UOS
+  Removed usage of old Data in Shard selection
+</p>
+<p>
+  <strong>Version 0.8.2.34 [9/23/2022]</strong>
+  Add CUO.CloseTMap() function
+</p>
+<p>
+  <strong>Version 0.8.2.33 [9/23/2022]</strong>
+  Add Inspect buttons to script panel
+  (Cray) Fix method optional arguments and class properties in the AutoComplete.py generator
+</p>
+<p>
+  <strong>Version 0.8.2.32 [9/21/2022]</strong>
+  Added 2 new FindByID functions:
+  FindAllByID(id, ...)
+  and
+  FindAllByID([id id], ...)
+  both return a list of all the items found matching the criteria
+</p>
+<p>
+  <strong>Version 0.8.2.31 [9/20/2022]</strong>
+  Item.Amount was returning wrong value when it was in a vendor for sale.
+</p>
+<p>
+  <strong>Version 0.8.2.30 [9/20/2022]</strong>
+  Vendor.Buy was not handling the vendor resale list properly, and as a result was failing on OSI
+</p>
+<p>
+  <strong>Version 0.8.2.29 [9/19/2022]</strong>
+  revert (partially) some 8.2.24 pw changes that seemed to cause an exception
+</p>
+<p>
+  <strong>Version 0.8.2.27/28 [9/18/2022]</strong>
+  Enabled Vendor.Buy script api, and added a max price parameter that defaults to -1
+</p>
+<p>
+  <strong>Version 0.8.2.26 [9/17/2022]</strong>
+  The bandaid based on buf indicator was not considering vet, only heal.
+  As a result, the buf timing for pets was not functioning properly.
+</p>
+<p>
   <strong>Version 0.8.2.25 [9/13/2022]</strong>
   Serialize UOS scripts. That is, you can start more than 1, but they will only run 1 at a time. 
   If 1 is an endless loop, none of the others will get to run.
