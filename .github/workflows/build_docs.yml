@@ -32,8 +32,6 @@ jobs:
   
     #Run 
     - name: Run RE to trigger the creation of AutoComplete.json
-      run: $proc = start ./RazorEnhanced.exe -Passthru; $proc | Wait-Process -Timeout 10 -ErrorAction SilentlyContinue; kill $proc; echo done;
+      run: $proc = start ./RazorEnhanced.exe -Passthru; $proc | Wait-Process -Timeout 60 -ErrorAction SilentlyContinue; kill $proc; echo done;
     - name: Display directories
       run: dir Config/
-    - name: Display directories
-      run: dir -S
