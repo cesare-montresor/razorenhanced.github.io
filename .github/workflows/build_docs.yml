@@ -57,7 +57,7 @@ jobs:
     
     #Build Docs
     - name: Update local repo doc
-      run: Copy-Item  -Path .\doc\* -Destinatio .\website_repo\doc\ -Recurse -force
+      run: Copy-Item  -Path .\doc\* -Destination .\website_repo\doc\ -Recurse -force -Verbose
     
     - name: Display directories
       run: dir -S
