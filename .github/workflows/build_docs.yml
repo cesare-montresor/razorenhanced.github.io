@@ -59,7 +59,7 @@ jobs:
     - name: Change files
       run: echo '1' >> .\website_repo\test.txt
     
-    - name: Change files
+    - name: Read changed files
       run: Get-Content .\website_repo\test.txt
     
     - name: Display directories
